@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner =new Scanner (System.in);
+        int integerNumber= scanner.nextInt();
+        float floatNumber=scanner.nextFloat();
+        BigDecimal bd= new BigDecimal(floatNumber);
+        bd=bd.setScale(2,RoundingMode .HALF_UP);
+        System. out.println (integerNumber);
+        System. out.println (bd);
+        scanner.close ();
+    }
+}
