@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double balance = scanner.nextDouble();
+        int process = scanner.nextInt();
+        double amount = 0;
+        if(process == 1 || process == 2){
+            amount = scanner.nextDouble();
+            }
+        scanner.close();
+        switch (process){
+                case 1: 
+                    balance += amount;
+                    System.out.println((int)balance);
+                    break;
+                case 2:
+                    if(amount>balance){
+                        System.out.println("Insufficient Balance ");
+                        }else {
+                        balance -= amount;
+                        System.out.println((int)balance);
+                        }
+                     break;
+                default:
+                System.out.println("Invalid Input ");
+        }
+    }
+}
+                    
+        
