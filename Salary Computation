@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        double HRA,DA;
+        if(a<150000)
+        {
+            HRA=0.15*a;
+            DA=0.9*a;
+        }
+        else {
+            HRA=5000;
+            DA=0.98*a;
+        }
+        double GS;
+        GS=a+HRA+DA;
+        System.out.printf("%.2f",GS);
+    }
+}
