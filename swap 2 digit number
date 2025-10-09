@@ -1,18 +1,16 @@
 import java.io.*;
 import java.util.*;
 public class Solution {
-    public static void main(String[] args){
-        Scanner scanner  = new Scanner(System.in);
-       String num = scanner.nextLine().trim();
-           if (num.length() >= 2) {
-            char firstDigit = num.charAt(0);
-            char secondDigit = num.charAt(1);
-            int swappedNumber = Integer.parseInt(String.valueOf(secondDigit) + String.valueOf(firstDigit));
-            System.out.println(swappedNumber);
+    public static void main(String[] args) {
+        Scanner A=new Scanner(System.in);
+        String a=A.nextLine();
+        if(a.length()>=2){
+            char fr=a.charAt(0);
+            char sec=a.charAt(1);
+            System.out.println(""+sec+fr);
         }
-        else {
+        else{
             System.out.println("STDOUT");
         }
-               scanner.close();
-    }
+     }
 }
