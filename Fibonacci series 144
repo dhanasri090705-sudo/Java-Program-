@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+public class Solutoin{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int n=scanner.nextInt();
+        int m=scanner.nextInt();
+        float sum=0f;
+        int f=0,s=1,fib=0;
+        if(n>=1 && m<=20){
+        for(int i=1;i<=m;i++){
+            if(i==1)
+                fib=0;
+            else if(i==2)
+                fib=1;
+            else{
+                fib=f+s;
+                f=s;
+                s=fib;
+            }
+            if(i>=n)
+                sum=sum+fib;
+        }
+        System.out.printf("The Sum of Fibonacci value is %.1f" ,sum);
+    }
+    else {
+        System.out.print("Invalid Input");
+        }
+    }
+}
